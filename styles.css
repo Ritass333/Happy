@@ -1,0 +1,115 @@
+body {
+    background-color: #E6E6FA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    height: 100%; /* Устанавливаем высоту body на 100% */
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.greeting {
+    letter-spacing: 0.2em;
+    font-size: 1.5em;
+    color: #4B0082;
+}
+
+.main-image {
+    width: 600px;
+    max-width: 300px;
+    margin: 20px 0;
+    margin-top: 15px;
+    margin-bottom:90px;
+   
+}
+
+.links {
+    margin: 20px 0;
+}
+
+.links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #d16ef8;
+    font-weight: bold;
+    transition: color 0.3s ease; /* Плавное изменение цвета текста */
+}
+
+.links a:hover {
+    color: rgb(255, 29, 180); /* Цвет текста при наведении */
+}
+
+.section-wrapper {
+    background-color: #eccef8; /* Нежно розовый фон для разделов */
+    padding: 10px; /* Добавляем отступы вокруг контейнера */
+    border-radius: 5px; /* Закругляем углы контейнера */
+    margin-bottom: 30px; /* Отступ снизу между разделами */
+    text-align: center;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carousel-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    list-style-type: none; /* Убираем маркеры списка */
+}
+
+.carousel-slide {
+    min-width: 100px;
+    flex: 0 0 auto;
+    margin: 0 10px; /* Увеличение расстояния между изображениями */
+}
+
+.carousel-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+}
+.cmc {
+    margin-bottom: 10px;
+    margin-top: -120px;
+    font-size: 50px;
+    width: 20px;
+    color: #c068e2;
+}
+.birthday-message {
+    font-size: 16px;
+    font-family: FOOTLIGHT MT LIGHT ;
+    
+}
+
+.cmc2 {
+    text-align: center;
+    font-weight: 600;
+    font-family:mv boli;
+
+
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-110px * 10)); /* 110px (100px ширина + 10px маргин) * количество изображений */
+    }
+}
