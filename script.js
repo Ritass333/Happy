@@ -12,3 +12,24 @@ for (let i = 0; i < cloneCount; i++) {
         track.appendChild(clone);
     });
 }
+
+
+
+let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
+const totalItems = items.length;
+
+document.getElementById('next-btn').addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % totalItems;
+    updateCarousel();
+});
+
+document.getElementById('prev-btn').addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+    updateCarousel();
+});
+
+function updateCarousel() {
+    const offset = -currentIndex * 100;
+    document.querySelector('.carousel-inner').style.transform = `translateX(${offset}%)`;
+}

@@ -1,115 +1,373 @@
-body {
-    background-color: #E6E6FA;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    height: 100%; /* Устанавливаем высоту body на 100% */
+@keyframes glow {
+    0% { text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4, 0 0 20px #ff69b4, 0 0 25px #ff69b4; }
+    50% { text-shadow: 0 0 10px #ff1493, 0 0 20px #ff1493, 0 0 30px #ff1493, 0 0 40px #ff1493, 0 0 50px #ff1493; }
+    100% { text-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4, 0 0 20px #ff69b4, 0 0 25px #ff69b4; }
+ }
+ 
+ body {
+   background-color: #E6E6FA;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin: 0;
+   font-family: 'Arial', sans-serif;
+   height: 100%; /* Устанавливаем высоту body на 100% */
 }
 
 .container {
-    text-align: center;
-    width: 90%;
-    max-width: 600px;
-    margin-bottom: 20px;
+   text-align: center;
+   width: 90%;
+   max-width: 600px;
+   margin-bottom: 20px;
 }
 
 .greeting {
-    letter-spacing: 0.2em;
-    font-size: 1.5em;
-    color: #4B0082;
+   letter-spacing: 0.2em;
+   font-size: 1.5em;
+   color: #4B0082;
 }
 
 .main-image {
-    width: 600px;
-    max-width: 300px;
-    margin: 20px 0;
-    margin-top: 15px;
-    margin-bottom:90px;
-   
+   width: 100%;
+   max-width: 300px;
+   margin: 20px 0;
 }
 
 .links {
-    margin: 20px 0;
+   margin: 20px 0;
 }
 
 .links a {
+   margin: 0 10px;
+   text-decoration: none;
+   color: #4B0082;
+   font-weight: bold;
+}
+
+.carousel {
+   position: relative;
+   width: 100%;
+   overflow: hidden;
+   margin-top: 20px;
+}
+
+.carousel-track-container {
+   overflow: hidden;
+   width: 100%;
+}
+
+.carousel-track {
+   display: flex;
+   animation: scroll 20s linear infinite;
+   list-style-type: none; /* Убираем маркеры списка */
+}
+
+.carousel-slide {
+   min-width: 100px;
+   flex: 0 0 auto;
+   margin: 0 10px; /* Увеличение расстояния между изображениями */
+}
+
+.carousel-image {
+   width: 100px;
+   height: 100px;
+   object-fit: cover;
+   display: block;
+}
+
+ /* index */
+ .index {
+    font-size: 20px;
+    font-family:CONSTANTIA ;
+    margin-top: 200px;
+ }
+ 
+ /*  menu */
+ 
+ .links {
+    margin: 20px 0;
+ }
+ 
+ .links a {
     margin: 0 10px;
     text-decoration: none;
     color: #d16ef8;
     font-weight: bold;
     transition: color 0.3s ease; /* Плавное изменение цвета текста */
-}
-
-.links a:hover {
+ }
+ 
+ .links a:hover {
     color: rgb(255, 29, 180); /* Цвет текста при наведении */
-}
-
-.section-wrapper {
-    background-color: #eccef8; /* Нежно розовый фон для разделов */
-    padding: 10px; /* Добавляем отступы вокруг контейнера */
-    border-radius: 5px; /* Закругляем углы контейнера */
-    margin-bottom: 30px; /* Отступ снизу между разделами */
-    text-align: center;
-}
-
-.carousel {
+ }
+ 
+ .carousel {
     position: relative;
     width: 100%;
     overflow: hidden;
     margin-top: 20px;
-}
-
-.carousel-track-container {
+ }
+ 
+ .carousel-track-container {
     overflow: hidden;
     width: 100%;
-}
-
-.carousel-track {
+ }
+ 
+ .carousel-track {
     display: flex;
     animation: scroll 20s linear infinite;
     list-style-type: none; /* Убираем маркеры списка */
-}
-
-.carousel-slide {
+ }
+ .carousel-slide {
     min-width: 100px;
     flex: 0 0 auto;
     margin: 0 10px; /* Увеличение расстояния между изображениями */
-}
-
-.carousel-image {
+ }
+ 
+ .carousel-image {
     width: 100px;
     height: 100px;
     object-fit: cover;
     display: block;
-}
-.cmc {
+ }
+ .cmc {
     margin-bottom: 10px;
     margin-top: -120px;
     font-size: 50px;
     width: 20px;
     color: #c068e2;
-}
-.birthday-message {
+ }
+ .birthday-message {
     font-size: 16px;
     font-family: FOOTLIGHT MT LIGHT ;
-    
-}
-
-.cmc2 {
+ 
+ }
+ 
+ .cmc2 {
     text-align: center;
     font-weight: 600;
     font-family:mv boli;
+ }
+ 
+ .note {
+    font-family:courier;
+    color: #000000;
+    margin-top: 40px;
+ 
+ }
+ .question{
+    margin-top: 20px;
+ }
+ .container1 {
+    margin-top: 300px;
+    width: 50%;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: #f5d8fd;
+ }
+ 
+ .moments-body {
+    background-color: #cfe8ff; /* Нежно голубой фон */
+ }
+ 
+ .moments-container {
+    background-color: #ffffff;
+  
+ }
+ .moments-links {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #ffe0fc; 
+    margin-top: 110px;
+ }
+ 
+ .moments-links a {
+    text-decoration: none;
+    color: #000000;
+    padding: 5px 10px;
+    font-family: highlight let ;
+ }
+ 
+ .moments-links a:hover {
+    color: #000000;
+    border-radius: 5px;
+ }
+ .moments-links a:hover {
+    color: #ff69b4; /* Розовый цвет при наведении */
+    border-radius: 5px;
+ }
+ .video-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #e4f2fc; /* Розовый фон для видео и текста */
+    border-radius: 10px;
+ }
+ 
+ .video-container video {
+    max-width: 45%;
+    cursor: pointer;
+ }
+ 
+ .video-container .date {
+    max-width: 45%;
+    color: #ffffff; /* Розовый цвет */
+    font-family: 'Georgia', serif; /* Красивый шрифт */
+    font-size: 1.2em;
+    text-align: right;
+    animation: glow 1.5s infinite;
+ }
+ 
+ .video-container:nth-child(even) .date {
+    text-align: left;
+ }
+ /* Конфетти */
+ .confetti {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+ }
+ 
+ .confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    background-color: rgba(255, 105, 180, 0.7);
+    animation: confetti-fall 3s linear infinite;
+ }
+ .you-body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffe6e6; /* Нежно розовый фон */
+    overflow-y: scroll; /* Разрешить прокрутку */
+}
 
+.you-container {
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    margin-top: 20px;
+}
+.section-wrapperr { 
+  
+    padding: 10px; /* Добавляем отступы вокруг контейнера */
+    border-radius: 10px; /* Закругляем углы контейнера */
+    margin-bottom: 20px; /* Отступ снизу между разделами */
+    text-align: center;
 
+}
+.you-links {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    margin-top: 16px;
+    margin-left: 55px;
+    background-color: #ffd5f9;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.you-links a, .you-links span {
+    background-color: #f3d5ff;
+    padding: 10px;
+    text-decoration: none;
+    color: #000000;
+    border-radius: 5px;
+    
+}
+.header-text{
+    margin-top: 30px;
+
+}
+.you-links .current {
+    background-color: #ff69b4;
+    color: white;
+}
+
+.you-links a:hover {
+    color: #ff0080; /* Розовый цвет при наведении */
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #ffe6e6; /* Нежно розовый фон для каждого элемента карусели */
+    padding: 10px;
+}
+
+.carousel-item img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.carousel-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 90px;
+}
+
+.carousel-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-button:focus {
+    outline: none;
 }
 
 @keyframes scroll {
+   0% {
+       transform: translateX(0);
+   }
+   100% {
+       transform: translateX(calc(-110px * 10)); /* 110px (100px ширина + 10px маргин) * количество изображений */
+   }
+} 
+
+ @keyframes confetti-fall {
     0% {
-        transform: translateX(0);
+        transform: translateY(-100vh) rotate(0deg);
     }
     100% {
-        transform: translateX(calc(-110px * 10)); /* 110px (100px ширина + 10px маргин) * количество изображений */
+        transform: translateY(100vh) rotate(360deg);
     }
-}
+ }

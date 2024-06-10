@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Яні</title>
+    <title>Вопрос</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-   <p class="Меню">
- Правила сайту 
-   </p>
-  
+<body>
+    <div class="container1">
+        <h1>Скільки тобі років?</h1>
+        <form>
+            <div class="question">
+                <input type="radio" name="age" value="19" id="age19" onclick="location.href='allowed.html'">
+                <label for="age19">19</label><br>
+                <input type="radio" name="age" value="10" id="age10" onclick="location.href='too_young_10.html'">
+                <label for="age10">10</label><br>
+                <input type="radio" name="age" value="12" id="age12" onclick="location.href='too_young_12.html'">
+                <label for="age12">12</label><br>
+                <input type="radio" name="age" value="16" id="age16" onclick="location.href='too_young_16.html'">
+                <label for="age16">16</label><br>
+            </div>
+        </form>
+        <p class="note">Вхід строго з 19 років</p>
+    </div>
+</body>
+</html>
